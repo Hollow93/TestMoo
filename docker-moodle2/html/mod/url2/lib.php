@@ -30,9 +30,9 @@ defined('MOODLE_INTERNAL') || die;
  * @param string $feature FEATURE_xx constant for requested feature
  * @return mixed True if module supports feature, false if not, null if doesn't know
  */
-function url2_supports($feature)
-{
-    switch ($feature) {
+//function url2_supports($feature)
+//{
+//    switch ($feature) {
 //        case FEATURE_MOD_ARCHETYPE:
 //            return MOD_ARCHETYPE_RESOURCE;
 //        case FEATURE_GROUPS:
@@ -43,19 +43,19 @@ function url2_supports($feature)
 //            return true;
 //        case FEATURE_COMPLETION_TRACKS_VIEWS:
 //            return true;
-        case FEATURE_GRADE_HAS_GRADE:
-            return false;
-        case FEATURE_GRADE_OUTCOMES:
-            return false;
-        case FEATURE_BACKUP_MOODLE2:
-            return true;
-        case FEATURE_SHOW_DESCRIPTION:
-            return true;
-
-        default:
-            return null;
-    }
-}
+//        case FEATURE_GRADE_HAS_GRADE:
+//            return false;
+//        case FEATURE_GRADE_OUTCOMES:
+//            return false;
+//        case FEATURE_BACKUP_MOODLE2:
+//            return true;
+//        case FEATURE_SHOW_DESCRIPTION:
+//            return true;
+//
+//        default:
+//            return null;
+//    }
+//}
 
 /**
  * Returns all other caps used in module
