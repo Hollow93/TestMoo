@@ -1,0 +1,38 @@
+version: '2'
+services:
+  mysql:
+    build: mysql
+    env_file:
+<<<<<<< HEAD
+      - 1.env
+    ports:
+      - "3306:3306"
+=======
+      - envs/common.env
+>>>>>>> fdc28c9bf0762cebfe4abf0349bee2b860353335
+    volumes:
+      - ./envs:/envs
+      - ./data/moodle-mysql:/var/lib/mysql
+  moodle:
+    build: moodle
+    links:
+      - mysql
+    env_file:
+<<<<<<< HEAD
+      - 1.env
+=======
+      - envs/common.env
+>>>>>>> fdc28c9bf0762cebfe4abf0349bee2b860353335
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+<<<<<<< HEAD
+      - /data/letsencrypt:/etc/letsencrypt
+      - ./provision/etc/apache2/sites-enabled:/etc/apache2/sites-enabled/
+      - .:/application
+=======
+      - ./envs:/envs
+      - ./data/letsencrypt:/etc/letsencrypt
+      - ./data/moodle-moodledata:/var/moodledata
+>>>>>>> fdc28c9bf0762cebfe4abf0349bee2b860353335

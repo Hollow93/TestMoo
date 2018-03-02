@@ -1,0 +1,32 @@
+version: '2'
+services:
+  mysql:
+    image: up2university/moodle-mysql:${DOCKER_TAG}
+    restart: unless-stopped
+    env_file:
+<<<<<<< HEAD
+      - 1.env
+=======
+      - envs/common.env
+>>>>>>> fdc28c9bf0762cebfe4abf0349bee2b860353335
+    volumes:
+      - ./envs:/envs
+      - ./data/moodle-mysql:/var/lib/mysql
+  moodle:
+    image: up2university/moodle:${DOCKER_TAG}
+    restart: unless-stopped
+    links:
+      - mysql
+    env_file:
+<<<<<<< HEAD
+      - 1.env
+=======
+      - envs/common.env
+>>>>>>> fdc28c9bf0762cebfe4abf0349bee2b860353335
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./envs:/envs
+      - ./data/letsencrypt:/etc/letsencrypt
+      - ./data/moodle-moodledata:/var/moodledata

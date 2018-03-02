@@ -1,0 +1,8 @@
+[27-Feb-2018 22:38:22 Europe/London] PHP Fatal error:  Cannot redeclare url_get_extra_capabilities() (previously declared in /application/html/mod/url/lib.php:54) in /application/html/mod/url2/lib.php on line 35
+[27-Feb-2018 22:40:21 Europe/London] Default exception handler: Plugin "mod_url2" is defective or outdated, can not continue, sorry. Debug: Missing mandatory en language pack.
+Error code: detectedbrokenplugin
+* line 668 of /lib/upgradelib.php: plugin_defective_exception thrown
+* line 444 of /lib/upgradelib.php: call to upgrade_plugins_modules()
+* line 1754 of /lib/upgradelib.php: call to upgrade_plugins()
+* line 699 of /admin/index.php: call to upgrade_noncore()
+

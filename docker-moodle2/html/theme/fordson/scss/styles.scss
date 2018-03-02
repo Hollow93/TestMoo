@@ -1,0 +1,786 @@
+
+/**
+* FORDSON CUSTOMIZATIONS FOR NEW ELEMENTS AND DEFAULT STYLING
+**/
+
+// FORDSON CustomSettings
+$fpstartwrap-bg: #FFF !default;
+$fpicon-hover: #bcd5db !default;
+$fpicon-icon: darken($fpicon-hover, 10%) !default;
+$fpicon-colour: #026C87 !default;
+$fpicon-width: 100px !default;
+$fpiconcreate-width: 150px !default;
+$headerimagepadding: 275px !default;
+$courseboxheight: 250px !default;
+$marketing1image: #fff !default;
+$marketing2image: #fff !default;
+$marketing3image: #fff !default;
+$marketing4image: #fff !default;
+$marketing5image: #fff !default;
+$marketing6image: #fff !default;
+$markettextbg: rgba(255, 255, 255, 0.8) !default;
+$markettile-radius: 5px !default;
+$navbarurl: #FFF !default;
+$card-footer-bg: #ccc !default;
+$headerfade-bg: #d4d4d4 !default;
+$header-color: #FFF !default;
+$headings-color: #3a3a3a !default;
+$body-color: #3a3a3a !default;
+$link-color: $brand-primary !default;
+$breadcrumb-padding-y: 10px !default;
+$breadcrumb-padding-x: 10px !default;
+$border-radius: 4px !default;
+$breadcrumb-bg: #fff !default;
+$footer-bg: $body-bg !default;
+$learningcontentpadding: 400px !default;
+$blockwidthfordson: 280px !default;
+$slideshowheight: 250px !default;
+$activityiconsize: 36px !default;
+$activityhover: #fff6ae !default;
+$gutterwidth: 6rem !default;
+
+/**
+* Layout Header
+**/
+
+#page-header h1 {
+    font-weight:600;
+    color: $header-color;
+}
+
+#page-header .headerfade {
+    background: $headerfade-bg;
+    border-left: 1px solid $card-bg;
+    border-right: 1px solid $card-bg;
+}
+
+@media screen and (min-width: 992px) {
+#page.container-fluid {
+    padding: 0 $gutterwidth  !important;
+}
+}
+
+.headerbkg {
+    margin-top:48px;
+    height:$headerimagepadding;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    box-shadow: 0px 3px 5px 1px rgba(0,0,0,0.7);
+}
+
+div#learningcontent {
+    position:relative;
+    margin-top: $learningcontentpadding;
+    background-color: $card-bg;
+}
+
+#page-navbar .dropdown-toggle {
+    padding: $breadcrumb-padding-y $breadcrumb-padding-x;
+    margin-left: 10px;
+    background-color: $breadcrumb-bg;
+    border-radius: $border-radius;
+}
+
+.breadcrumb-nav .breadcrumb {margin-bottom: .5rem;}
+
+#page-navbar .open>.dropdown-menu {
+    border-radius: $border-radius;
+    margin-left: 5px;
+}
+
+.headerlogo {
+    background-color: $headerfade-bg;
+}
+
+.headerlogo img {
+    padding: $spacer;
+}
+
+@media screen and (min-width: 991px) {
+#region-main.has-blocks {
+    width: calc(100% - #{$blockwidthfordson});
+    }
+}
+
+@media screen and (min-width: 991px) {
+[data-region="blocks-column"] {
+    width: calc(#{$blockwidthfordson} - 30px);
+    }
+}
+
+.moodle-dialogue-bd div[role="alert"] {
+    background-color: $brand-danger;
+    padding: 1rem;
+}
+
+/* login on frontpage */
+
+.fpsignup {
+    border-radius: $border-radius;
+    background-color: $gray-lightest;
+    padding: $spacer;
+    box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.3);
+    border: 1px solid $card-bg;
+}
+
+.sign-up-btn {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.fpsignup .input-group {
+    margin: 1rem 0;
+}
+
+.fpsignup .form-control {
+    font-size: 2rem;
+}
+
+.sign-up-btn button {
+    font-size: 2rem;
+}
+
+.col-md-4.signinform {
+    padding-left: 0px;
+    padding-right: 20px;
+    margin-right: 15px;
+}
+
+/* Teacher Dashboard */
+
+div#coursecontrols {
+    position: absolute;
+    top: -51px;
+    right: -1px;
+    padding: 7px 15px 4px 15px;
+    border-top: 5px solid $brand-primary;
+    background-color: $card-bg;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.teacherdashboard {
+    padding: 1rem;
+}
+
+.studentdashboard {
+    padding: 1rem;
+}
+
+.teacherdashbutton {
+    font-size: 16px;
+    float:right;
+    padding:5px 10px;
+    border-radius: $border-radius;
+}
+
+.teacherdashboard i.dashicon {
+    float:left;
+    padding: 0px 4px;
+}
+
+.coursestafflisting img.userpicture {
+    margin-right: 0;
+    float: right;
+}
+
+.thiscoursebutton {
+    font-size: 16px;
+    float:right;
+    padding:5px 10px;
+    border-radius: $border-radius;
+}
+
+.thiscoursebutton .dropdown-menu {
+    right: -10px;
+    left: initial;
+}
+
+.editcogbutton {
+    float:right;
+    border-radius: $border-radius;
+}
+
+.enrollcodebutton {
+    font-size: 16px;
+    float:right;
+    padding:5px 10px;
+    border-radius: $border-radius;
+}
+
+.teacherdashbutton:hover, .thiscoursebutton:hover, .enrollcodebutton:hover, .editcogbutton:hover {
+    background-color: darken($card-bg, 5%)
+}
+
+@media screen and (max-width: 576px) {
+    div#coursecontrols {
+        position: initial;
+    }
+    div#coursecontrols {
+    border-radius: 0px 0px 0px 0px;
+    }
+    .enrollcodebutton {
+    display:none;
+    }
+}
+
+/* Footer */
+
+ul.footercontact {
+    list-style: none;
+}
+
+/* Slideshow */
+
+.slide1image, .slide2image, .slide3image {
+    height: $slideshowheight;
+}
+
+.carousel-caption.d-none.d-md-block {
+    background: rgba(0,0,0,0.7);
+    border-radius: 1rem 1rem 0 0;
+}
+
+.carousel-caption {
+    bottom: 0px;
+}
+
+.carousel-indicators {
+    bottom: 0!important;
+}
+
+.carousel-indicators li {
+    width: 40px;
+    height: 10px;
+    margin: 0;
+    border-radius: 0px;
+}
+
+.carousel-indicators .active {
+    width: 40px;
+    height: 10px;
+    margin: 0;
+    background-color: #fff;
+    border-radius: 0px;
+}
+
+a.left.carousel-control .fa-chevron-left {
+    font-size: 35px;
+    position: absolute;
+    left: 10px;
+    bottom: 40%;
+}
+
+a.right.carousel-control .fa-chevron-right {
+    font-size: 35px;
+    position: absolute;
+    right: 10px;
+    bottom: 40%;
+}
+
+/* Enhanced Homepage */
+
+.fpwonderbox {
+    margin-bottom:1rem;
+}
+
+.fpstartwrap {
+    margin:0px;
+    border-radius: 5px;
+}
+
+.fpstart {
+    display: inline-block;
+    border-radius: 2px;
+    padding: 15px;
+    text-align: left;
+    background-color:$fpstartwrap-bg;
+    width:100%;
+    text-align:center;
+}
+
+.fpstart .iconset {
+  display:block;
+}
+
+.fpicon {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    width: $fpicon-width;
+    text-align: center;
+    vertical-align: top;
+    background-color: $fpicon-icon;
+    border-radius: 5px;
+}
+
+.fpiconcreate {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    width: $fpiconcreate-width;
+    text-align: center;
+    vertical-align: top;
+    background-color: $brand-success;
+    border-radius: 5px;
+}
+
+.fpicon a {color: $fpicon-colour;}
+
+.fpiconcreate a {color: $fpicon-colour;}
+
+.fpicon:hover {
+    background-color: $fpicon-hover;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.fpiconcreate:hover {
+    background-color: $brand-danger;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+div#fpslider {
+    background-color: $fpstartwrap-bg;
+    padding: $spacer;
+    border-radius: $border-radius;
+    border: 1px solid $gray-lighter;
+}
+
+.alertbox {
+    text-align:center;
+}
+
+.alertmessage {
+    display:inline-block;
+    background-color: $brand-warning;
+    border-radius:5px;
+    padding: 15px;
+    margin: 20px;
+}
+
+.alertmessage p{
+    margin-top: initial;
+    margin-bottom: initial;
+}
+
+.markettiles {
+    margin: 1rem 0;
+}
+
+.market-tile {
+    margin: 1rem 0rem;
+    background-color: $body-bg;
+    padding: 1rem;
+    border: 1px solid $gray-base;
+    border-top: 7px solid;
+}
+
+.marketcontent {
+    padding:1rem; 
+    background-color: $markettextbg;
+    height: 10rem;
+    overflow:auto;
+    margin-bottom: 1rem;
+}
+
+.marketcontent::-webkit-scrollbar {
+    width: 7px;
+}
+
+.marketcontent::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 7px rgba(0,0,0,0.3);
+    border-radius: 5%;
+}
+
+.marketcontent::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+form#enrolform_easy {
+    text-align: center;
+    padding: 20px 0px;
+}
+
+form#enrolform_easy .input-group-addon.qr-button {
+    font-size: 2rem;
+}
+
+form#enrolform_easy input#enrolform_course_code {
+    font-size: 2rem;
+}
+
+form#enrolform_easy button.btn.btn-primary {
+    font-size: 2rem;
+}
+
+/**
+* Available Courses
+**/
+
+.class-box-fp {
+    height: $courseboxheight;
+    background-color: $body-bg;
+    padding: 1rem;
+    border: 1px solid $body-bg;
+    border-radius: $card-border-radius;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
+}
+
+.class-box-fp .course-title h4 a:hover {text-decoration: none;}
+
+.class-box-fp .course-title {
+    background-color: $card-bg;
+    padding: $spacer;
+    padding-top: 2rem;
+    margin-bottom: 0;
+    text-align: center;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
+}
+
+.class-box-fp .course-title:after {
+    text-decoration: none;
+    display:block;
+    content: '';
+    border-bottom: solid 1rem $brand-primary;   
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+}
+
+.class-box-fp .course-title:hover:after  {transform: scaleX(1); }
+
+.courseimagecontainer {
+    height: calc(45%);
+}
+
+.class-box {
+    margin-bottom: 2rem;
+    border: 1px solid $card-bg;
+    border-radius: $card-border-radius;
+    box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.3);
+    padding: 1rem;
+    height: $courseboxheight;
+    overflow: hidden;
+}
+
+.course-title {
+    padding-top: 1rem;
+}
+
+.class-list {
+    clear: both;
+}
+
+.coursesmorelink {
+    padding: 1rem;
+}
+
+.course-image-view {
+    height: 100%;
+}
+
+.dash-course-image-view {padding-top:5rem;}
+
+.class-box .course-summary {
+    height: 4rem;
+    overflow:auto;
+    margin-bottom: 1rem;
+}
+
+.class-box .course-summary::-webkit-scrollbar {
+    width: 7px;
+}
+
+.class-box .course-summary::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 7px rgba(0,0,0,0.3);
+    border-radius: 5%;
+}
+
+.class-box .course-summary::-webkit-scrollbar-thumb {
+    background-color: darken($brand-primary, 15%);
+    outline: 1px solid slategrey;
+}
+
+.tooltip-inner {
+    max-width: 350px;
+    font-size:14px;
+}
+
+.course_category_tree {
+    padding: 1rem;
+}
+
+.cat-icon {
+    margin:5px;
+}
+
+.category.box-class {
+    padding-bottom: $spacer;
+    text-align: center;
+}
+
+.category.box-class:nth-child(5) { 
+    clear:both;
+}
+
+.info-enhanced {
+    background-color: $body-bg;
+    display: inline-block;
+    padding: $spacer;
+    border-radius: $border-radius;
+}
+
+.circle-count {
+    float: right;
+    padding-left:3px;
+}
+
+.courseimagecontainer:hover .course-overlay {
+    opacity: 1;
+}
+
+.courseimagecontainer:hover .course-image-view {
+    opacity: 0.3;
+}
+
+.course-overlay {
+    -webkit-transition: .5s ease;
+    -o-transition: .5s ease;
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    left: 40%;
+    font-size: 5rem;
+    margin-top: -7rem;
+    color: $gray-dark;
+}
+
+.coursestyle2 {
+    width: 100%;
+    height: $courseboxheight;
+    background-color: #000;
+    color: #fff;
+    text-align: left;
+    font-size: 16px;
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,.15);
+    box-shadow: 0 0 5px rgba(0,0,0,.15);
+}
+
+.coursedimmed1 {
+    background-color: rgba(150,150,150,0.9);
+
+}
+
+.coursedimmed2 {
+    background-color: rgba(150,150,150,0.9);
+    height: 100%;
+}
+
+.coursedimmed3 {
+    background-color: rgba(150,150,150,.9);
+    padding: 1rem;
+}
+
+.class-box-courseview {
+    background-color: #dae6e5;
+    border: 1px solid #dae6e5;
+    -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+    height: 100%;
+}
+
+.coursestyle2 * {
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.coursestyle2 figcaption {
+  position: absolute;
+  height: 98px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  overflow: hidden;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.coursestyle2 h3 {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 3px 0;
+}
+
+a.coursestyle2url {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+a.coursestyle3url {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.coursestyle2:hover figcaption,
+.coursestyle2.hover figcaption {
+  height: calc(100%);
+}
+
+.coursestyle2:hover p.course-summary::-webkit-scrollbar {
+    width: 7px;
+}
+
+.coursestyle2:hover p.course-summary::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 7px rgba(0,0,0,0.3);
+    border-radius: 5%;
+}
+
+.coursestyle2:hover p.course-summary::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+@media screen and (min-width: 992px) {
+    .coursestyle2:hover p.course-summary,
+    .coursestyle2.hover p.course-summary {
+      overflow-y: auto;
+      height: 5rem;
+    }
+}
+
+.coursestyle2 .course-card {
+    margin-top: 4rem;
+}
+
+.coursestyle2:hover .course-card {
+    margin-top: 0rem;
+}
+
+ul.teacherscourseview {
+    list-style-type: none;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.tilecontainer {
+    position: relative;
+    margin: 3rem 0 2rem 0;
+}
+
+
+/** 
+* TIDY UP 
+**/
+#page-badges-mybadges .fpwonderbox {display:none;}
+#page-badges-mybadges .markettiles {display:none;}
+#page-user-files .fpwonderbox {display:none;}
+
+.p-a-1 {padding: 0 1rem !important;}
+
+.glossarycontrol span.helplink {
+    padding: 1rem;
+    background-color: $body-bg;
+    border-radius: $border-radius;
+}
+
+.quizattemptcounts {
+    padding: 1rem;
+    background-color: $body-bg;
+    border-radius: $border-radius;
+}
+
+
+.socials_wrapper {
+    margin:0 auto;
+    .socials {
+        margin-bottom:0;
+    }
+}
+.socials a:hover{
+    text-decoration:none;
+}
+
+.single-section h3.sectionname {
+    text-align: initial;
+}
+
+.pagelayout-incourse #page-navbar .dropdown-toggle {
+    display: none;
+}
+
+#region-main .block-region .card {
+    box-shadow: initial;
+    -webkit-box-shadow: initial;
+    border: 0;
+}
+
+//Fix for collapsed topic course format
+body.format-topcoll h3.sectionname:before {
+    display: none;
+}
+
+/* H5P regression fix for editor https://moodle.org/mod/forum/discuss.php?d=347602#p1402801 */
+@media (min-width:544px) {
+    .form-inline .form-control-static {
+        display: block!important;
+    }
+}
+/* End H5P */
+
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 2;
+    cursor: pointer;
+    transition: opacity 0.2s ease-out;
+    opacity: 0;
+}
+
+#back-to-top.show {
+    opacity: 1;
+}
+
+
+
+
+/* Fix print page for Assignments */
+
+@media print {
+
+    .path-mod-assign [data-region="grade-panel"] {
+        position: relative !important;
+    }
+
+    .gradingform_rubric .criterion .levels .level.checked {
+        background-color: #ccc;
+        -webkit-print-color-adjust: exact;
+    }
+    .editor_atto_content {
+        position: relative !important;
+        -webkit-print-color-adjust: exact;
+        display: block !important;
+    }
+
+    .path-mod-assign [data-region="user-info"] .nowrap {
+    padding: 3rem;
+    }
+
+}
